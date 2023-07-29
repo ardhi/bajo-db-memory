@@ -1,6 +1,6 @@
 import { Query } from 'mingo'
 
-async function findRecord ({ schema, filter = {}, options = {} } = {}) {
+async function find ({ schema, filter = {}, options = {} } = {}) {
   const { prepPagination } = this.bajoDb.helper
   const { noLimit } = options
   const { limit, skip, query, sort, page } = await prepPagination(filter, schema)
@@ -14,4 +14,4 @@ async function findRecord ({ schema, filter = {}, options = {} } = {}) {
   return { data: cursor.all(), page, limit, count, pages: Math.ceil(count / limit) }
 }
 
-export default findRecord
+export default find

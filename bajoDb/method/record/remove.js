@@ -1,6 +1,6 @@
-import getRecord from './get-record.js'
+import getRecord from './get.js'
 
-async function removeRecord ({ schema, id, options = {} } = {}) {
+async function remove ({ schema, id, options = {} } = {}) {
   const { importPkg } = this.bajo.helper
   const { findIndex, pullAt } = await importPkg('lodash-es')
   const rec = await getRecord.call(this, { schema, id })
@@ -9,4 +9,4 @@ async function removeRecord ({ schema, id, options = {} } = {}) {
   return { data: rec.data }
 }
 
-export default removeRecord
+export default remove

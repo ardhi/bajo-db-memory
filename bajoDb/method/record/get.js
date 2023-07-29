@@ -1,4 +1,4 @@
-async function getRecord ({ schema, id, options = {} } = {}) {
+async function get ({ schema, id, options = {} } = {}) {
   const { error, importPkg } = this.bajo.helper
   const { thrownNotFound = true } = options
   const { find } = await importPkg('lodash-es')
@@ -7,4 +7,4 @@ async function getRecord ({ schema, id, options = {} } = {}) {
   return { data: result }
 }
 
-export default getRecord
+export default get
