@@ -8,7 +8,7 @@ async function update ({ schema, id, body, options } = {}) {
   const current = this.bajoDbMingo.storage[schema.name][idx]
   this.bajoDbMingo.storage[schema.name][idx] = merge(current, body)
   const result = this.bajoDbMingo.storage[schema.name][idx]
-  return { old: old.data, new: result }
+  return { oldData: old.data, data: result }
 }
 
 export default update

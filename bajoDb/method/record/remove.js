@@ -6,7 +6,7 @@ async function remove ({ schema, id, options = {} } = {}) {
   const rec = await getRecord.call(this, { schema, id })
   const idx = findIndex(this.bajoDbMingo.storage[schema.name], { id })
   pullAt(this.bajoDbMingo.storage[schema.name], [idx])
-  return { data: rec.data }
+  return { oldData: rec.data }
 }
 
 export default remove
