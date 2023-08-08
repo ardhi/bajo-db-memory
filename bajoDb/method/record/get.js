@@ -3,7 +3,7 @@ async function get ({ schema, id, options = {} } = {}) {
   const { thrownNotFound = true } = options
   const { find } = await importPkg('lodash-es')
   const result = find(this.bajoDbMingo.storage[schema.name], { id })
-  if (!result && thrownNotFound) throw error('Record \'%s@%s\' not found!', id, schema.name)
+  if (!result && thrownNotFound) throw error('Record \'%s@%s\' not found!', id, schema.name, { statusCode: 404 })
   return { data: result }
 }
 
