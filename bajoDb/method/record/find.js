@@ -4,7 +4,7 @@ async function find ({ schema, filter = {}, options = {} } = {}) {
   const { prepPagination } = this.bajoDb.helper
   const { noLimit } = options
   const { limit, skip, query, sort, page } = await prepPagination(filter, schema)
-  const criteria = query ? query.toJSON() : {}
+  const criteria = query ?? {}
   const q = new Query(criteria, { idKey: 'id' })
   let cursor = q.find(this.bajoDbMingo.storage[schema.name])
   const count = cursor.count()
