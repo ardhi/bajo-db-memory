@@ -10,7 +10,7 @@ async function find ({ schema, filter = {}, options = {} } = {}) {
   const count = cursor.count()
   cursor = q.find(this.bajoDbMingo.storage[schema.name])
   if (sort) cursor.sort(sort)
-  if (!noLimit) cursor.limit(limit).skip(skip)
+  if (!noLimit) cursor.skip(skip).limit(limit)
   return { data: cursor.all(), page, limit, count, pages: Math.ceil(count / limit) }
 }
 
