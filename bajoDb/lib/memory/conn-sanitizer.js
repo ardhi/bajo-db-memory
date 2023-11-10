@@ -1,4 +1,4 @@
-async function sanitizer (connection) {
+async function connSanitizer (connection) {
   const { importPkg } = this.bajo.helper
   const { pick } = await importPkg('lodash-es')
   const result = pick(connection, ['type', 'name', 'driver'])
@@ -6,4 +6,4 @@ async function sanitizer (connection) {
   return result
 }
 
-export default sanitizer
+export default connSanitizer
