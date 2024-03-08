@@ -1,6 +1,6 @@
 {
   "name": "bajo-db-mingo",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Bajo DB Mingo driver for Bajo Framework",
   "main": "index.js",
   "scripts": {
