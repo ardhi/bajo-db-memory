@@ -1,4 +1,4 @@
 {
-  "alias": "mingo",
+  "alias": "memory",
   "dependencies": ["bajo-db"]
 }

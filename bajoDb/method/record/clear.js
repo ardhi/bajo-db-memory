@@ -1,5 +1,5 @@
 async function clear ({ schema, options = {} } = {}) {
-  this.bajoDbMingo.storage[schema.name] = []
+  this.bajoDbMemory.storage[schema.name] = []
   return true
 }
 

@@ -1,4 +1,4 @@
 {
   "type": "memory",
-  "driver": "mingo"
+  "driver": "memory"
 }

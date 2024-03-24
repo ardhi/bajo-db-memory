@@ -5,7 +5,7 @@ async function count ({ schema, filter = {}, options = {} } = {}) {
   const { query } = await prepPagination(filter, schema)
   const criteria = query ?? {}
   const q = new Query(criteria, { idKey: 'id' })
-  const cursor = q.find(this.bajoDbMingo.storage[schema.name])
+  const cursor = q.find(this.bajoDbMemory.storage[schema.name])
   const count = cursor.count()
   return { data: count }
 }

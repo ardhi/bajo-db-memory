@@ -1,7 +1,7 @@
 {
-  "name": "bajo-db-mingo",
-  "version": "0.2.3",
-  "description": "Bajo DB Mingo driver for Bajo Framework",
+  "name": "bajo-db-memory",
+  "version": "0.2.4",
+  "description": "Bajo DB Memory driver for Bajo Framework",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,9 +9,10 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ardhi/bajo-db-mingo.git"
+    "url": "git+https://github.com/ardhi/bajo-db-memory.git"
   },
   "keywords": [
+    "memory",
     "mingo",
     "db",
     "driver",
@@ -22,10 +23,10 @@
   "author": "Ardhi Lukianto <ardhi@lukianto.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ardhi/bajo-db-mingo/issues"
+    "url": "https://github.com/ardhi/bajo-db-memory/issues"
   },
-  "homepage": "https://github.com/ardhi/bajo-db-mingo#readme",
+  "homepage": "https://github.com/ardhi/bajo-db-memory#readme",
   "dependencies": {
-    "mingo": "^6.4.3"
+    "memory": "^6.4.3"
   }
 }
