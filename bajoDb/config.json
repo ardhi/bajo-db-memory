@@ -1,6 +1,0 @@
-{
-  "connections": [{
-    "name": "memory",
-    "type": "memory"
-  }]
-}

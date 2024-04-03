@@ -1,4 +1,8 @@
 {
   "alias": "memory",
+  "persistence": {
+    "collections": [],
+    "period": 1
+  },
   "dependencies": ["bajo-db"]
 }

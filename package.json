@@ -1,6 +1,6 @@
 {
   "name": "bajo-db-memory",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Bajo DB Memory driver for Bajo Framework",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,6 @@
   },
   "homepage": "https://github.com/ardhi/bajo-db-memory#readme",
   "dependencies": {
-    "memory": "^6.4.3"
+    "mingo": "^6.4.3"
   }
 }
