@@ -1,8 +1,9 @@
 import { Query } from 'mingo'
 
 async function find ({ schema, filter = {}, options = {} } = {}) {
-  const { prepPagination } = this.bajoDb.helper
+  const { prepPagination, importPkg } = this.bajoDb.helper
   const { noLimit, dataOnly, noCount } = options
+  const { omit } = await importPkg('lodash-es')
   const { limit, skip, query, sort, page } = await prepPagination(filter, schema)
   const criteria = query ?? {}
   const q = new Query(criteria, { idKey: 'id' })
@@ -12,7 +13,9 @@ async function find ({ schema, filter = {}, options = {} } = {}) {
   cursor = q.find(this.bajoDbMemory.storage[schema.name])
   if (sort) cursor.sort(sort)
   if (!noLimit) cursor.skip(skip).limit(limit)
-  return { data: cursor.all(), page, limit, count, pages: Math.ceil(count / limit) }
+  let result = { data: cursor.all(), page, limit, count, pages: Math.ceil(count / limit) }
+  if (noCount) result = omit(result, ['count', 'pages'])
+  return result
 }
 
 export default find
