@@ -1,7 +1,6 @@
 async function instantiation ({ connection, schemas, noRebuild }) {
-  const { importPkg, getConfig, getPluginDataDir, fatal } = this.bajo.helper
-  const { pick } = await importPkg('lodash-es')
-  const fs = await importPkg('fs-extra')
+  const { fs, getConfig, getPluginDataDir, fatal } = this.bajo.helper
+  const { pick } = this.bajo.helper._
   const cfg = getConfig('bajoDbMemory', { full: true })
   this.bajoDbMemory.storage = this.bajoDbMemory.storage ?? {}
   const instance = pick(connection, ['name', 'type'])

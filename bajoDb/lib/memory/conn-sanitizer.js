@@ -1,6 +1,5 @@
 async function connSanitizer (connection) {
-  const { importPkg } = this.bajo.helper
-  const { pick } = await importPkg('lodash-es')
+  const { pick } = this.bajo.helper._
   const result = pick(connection, ['type', 'name', 'driver'])
   result.memory = true
   return result
