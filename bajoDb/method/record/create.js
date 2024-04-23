@@ -1,6 +1,6 @@
 import getRecord from './get.js'
 
-async function create ({ schema, body, options = {} } = {}) {
+async function create ({ schema, body, options = {} }) {
   const { error } = this.bajo.helper
   const { noResult } = options
   const exist = await getRecord.call(this, { schema, id: body.id, options: { thrownNotFound: false } })

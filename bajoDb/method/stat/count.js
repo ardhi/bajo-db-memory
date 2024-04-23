@@ -1,6 +1,6 @@
 import { Query } from 'mingo'
 
-async function count ({ schema, filter = {}, options = {} } = {}) {
+async function count ({ schema, filter = {}, options = {} }) {
   const { prepPagination } = this.bajoDb.helper
   const { query } = await prepPagination(filter, schema)
   const criteria = query ?? {}

@@ -1,4 +1,4 @@
-async function exists (schema) {
+async function exists ({ schema, options = {} }) {
   return true
 }
 

@@ -1,4 +1,4 @@
-async function get ({ schema, id, options = {} } = {}) {
+async function get ({ schema, id, options = {} }) {
   const { error } = this.bajo.helper
   const { thrownNotFound = true } = options
   const { find } = this.bajo.helper._

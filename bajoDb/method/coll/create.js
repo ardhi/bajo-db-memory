@@ -1,4 +1,4 @@
-async function exists (schema) {
+async function exists ({ schema, options = {} }) {
   this.bajoDbMemory.storage[schema.name] = []
 }
 

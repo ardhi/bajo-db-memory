@@ -1,6 +1,6 @@
 import getRecord from './get.js'
 
-async function remove ({ schema, id, options = {} } = {}) {
+async function remove ({ schema, id, options = {} }) {
   const { noResult } = options
   const { findIndex, pullAt } = this.bajo.helper._
   const rec = noResult ? undefined : await getRecord.call(this, { schema, id })
