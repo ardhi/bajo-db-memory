@@ -3,8 +3,8 @@ import { Query } from 'mingo'
 async function find ({ schema, filter = {}, options = {} }) {
   const { prepPagination } = this.bajoDb.helper
   const { omit } = this.bajo.helper._
-  const { limit, skip, query, sort, page } = await prepPagination(filter, schema)
-  const criteria = query ?? {}
+  const { limit, skip, sort, page } = await prepPagination(filter, schema)
+  const criteria = filter.query ?? {}
   const q = new Query(criteria, { idKey: 'id' })
   let cursor = q.find(this.bajoDbMemory.storage[schema.name])
   let count = 0
