@@ -1,6 +1,6 @@
 {
   "name": "bajo-db-memory",
-  "version": "0.3.2",
+  "version": "1.0.0",
   "description": "Bajo DB Memory driver for Bajo Framework",
   "main": "index.js",
   "scripts": {

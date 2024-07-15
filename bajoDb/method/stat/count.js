@@ -3,7 +3,7 @@ import { Query } from 'mingo'
 async function count ({ schema, filter = {}, options = {} }) {
   const criteria = filter.query ?? {}
   const q = new Query(criteria, { idKey: 'id' })
-  const cursor = q.find(this.bajoDbMemory.storage[schema.name])
+  const cursor = q.find(this.storage[schema.name])
   const count = cursor.count()
   return { data: count }
 }

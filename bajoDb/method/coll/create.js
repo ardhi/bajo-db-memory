@@ -1,5 +1,5 @@
 async function exists ({ schema, options = {} }) {
-  this.bajoDbMemory.storage[schema.name] = []
+  this.storage[schema.name] = []
 }
 
 export default exists

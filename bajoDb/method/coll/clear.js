@@ -1,5 +1,5 @@
 async function clear ({ schema, options = {} }) {
-  this.bajoDbMemory.storage[schema.name].splice(0)
+  this.storage[schema.name].splice(0)
   return true
 }
 

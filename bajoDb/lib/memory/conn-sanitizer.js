@@ -1,5 +1,5 @@
 async function connSanitizer (connection) {
-  const { pick } = this.bajo.helper._
+  const { pick } = this.app.bajo.lib._
   const result = pick(connection, ['type', 'name', 'driver'])
   result.memory = true
   return result
