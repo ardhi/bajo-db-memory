@@ -27,6 +27,6 @@
   },
   "homepage": "https://github.com/ardhi/bajo-db-memory#readme",
   "dependencies": {
-    "mingo": "^6.4.3"
+    "mingo": "^6.4.15"
   }
 }
