@@ -6,7 +6,7 @@ Plugin name: **bajoDbMemory**, alias: **memory**
 
 > <br />**Attention**: I do NOT accept any pull request at the moment, thanks!<br /><br />
 
-Memory driver for [Bajo Framework](https://github.com/ardhi/bajo). Requires [Bajo DB](https://github.com/ardhi/bajo-db)
+Memory storage driver for [Bajo](https://github.com/ardhi/bajo)'s database'. Requires [Bajo DB](https://github.com/ardhi/bajo-db)
 
 ## Installation
 
