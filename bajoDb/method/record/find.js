@@ -1,7 +1,7 @@
 import { Query } from 'mingo'
 
 async function find ({ schema, filter = {}, options = {} }) {
-  const { prepPagination } = this.app.bajoDb.helper
+  const { prepPagination } = this.app.bajoDb
   const { omit } = this.app.bajo.lib._
   const { limit, skip, sort, page } = await prepPagination(filter, schema)
   const criteria = filter.query ?? {}

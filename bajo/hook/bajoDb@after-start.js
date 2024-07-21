@@ -1,4 +1,4 @@
-async function afterStartBajoDb () {
+async function bajoDbAfterStart () {
   const { importModule } = this.app.bajo
   const { filter, map } = this.app.bajo.lib._
 
@@ -22,4 +22,4 @@ async function afterStartBajoDb () {
   }
 }
 
-export default afterStartBajoDb
+export default bajoDbAfterStart
